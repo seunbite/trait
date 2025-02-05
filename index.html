@@ -132,9 +132,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="main_figure1.png" alt="Main Figure" width="100%">
+      <img src="main_figure2.png" alt="Main Figure" width="100%">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        TRAIT is a personality test for LLMs based on trusted questionnaires (John et al., 1999; Jones and Paulhus, 2014) and large-scale commonsense knowledge graphs (West et al., 2022). LLMs show discrepancy in self-assessing their personality and actual decision making.
       </h2>
     </div>
   </div>
@@ -159,120 +159,99 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Benchmark Design Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Benchmark Design</h2>
+        <div class="content">
+          <img src="main_figure1.png" alt="Benchmark Design" width="100%">
+          <div class="content has-text-justified">
+            <p>
+              We construct TRAIT through a <strong>three-step pipeline with Human-AI collaboration</strong>. Starting from small-scale validated questionnaires (BFI and SD3), we expand them to diverse personality descriptions, then create detailed scenarios using the ATOMIC knowledge graph, and finally transform them into multi-choice questions with carefully designed options
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+<!-- Results 1 Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results 1: Current LLMs' Personality is distinct.</h2>
+        <div class="content">
+          <img src="main_result1.png" alt="Results 1" width="100%">
+          <div class="content has-text-justified">
+            <p>
+              TRAIT reveals that <strong>LLMs exhibit distinct and consistent personalities</strong>. Alignment-tuned models like GPT-4 and Claude show higher agreeableness (>85%) and conscientiousness, while displaying lower scores in Dark Triad traits compared to pre-trained models, suggesting the significant impact of alignment tuning on model personality.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<!-- Results 2 Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results 2: SFT change personalities a lot, but DPO doesn't.</h2>
+        <div class="content">
+          <img src="main_result2.png" alt="Results 2" width="100%">
+          <div class="content has-text-justified">
+            <p>
+              Alignment tuning <strong>significantly changes model personality, primarily through supervised instruction tuning rather than preference tuning</strong>. Changes include increased agreeableness (+22.9%) and decreased Dark Triad traits (-81.1%), which closely aligns with characteristics typically desired in teaching assistants.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+
+<!-- Results 3 Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results 3: Prompting has limited effect on personality.</h2>
+        <div class="content">
+          <img src="main_result3.png" alt="Results 3" width="100%">
+          <div class="content has-text-justified">
+            <p>
+              While prompting can effectively elicit most personality traits (average success rate of 85.2%), alignment-tuned models show <strong>notable resistance to expressing high psychopathy</strong> (79.8%) and high neuroticism (72.3%), compared to their ability to express other traits.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Results 4 Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TRAIT's Validity and Reliability</h2>
+        <div class="content">
+          <img src="main_result4.png" alt="Results 4" width="100%">
+          <div class="content has-text-justified">
+            <p>
+              TRAIT demonstrates <strong>superior validity and reliability</strong> compared to existing personality tests for LLMs, achieving the highest scores in content validity, internal validity, and reliability metrics while maintaining a zero refusal rate in multiple-choice questions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <!--BibTex citation -->
